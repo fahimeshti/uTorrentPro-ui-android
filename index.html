@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css" integrity="sha512-ykRBEJhyZ+B/BIJcBuOyUoIxh0OfdICfHPnPfBy7eIiyJv536ojTCsgX8aqrLQ9VJZHGz4tvYyzOM0lkgmQZGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>uTorrent Pro</title>
+
+  <!-- HTML -->
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="popSection" id="popContainer">
+    <div class="layer" onclick="closePopup()"></div>
+    <div class="popupTwo" id="popupTwo">
+      <h3 id="torHead">Add Torrent</h3>
+      <small id="smallText">smalll</small>
+      <input id="input" type="text" />
+      <div>
+        <button onclick="closePopup()">Cancel</button>
+        <button onclick="addSearch()" id="addBtn">Add</button>
+      </div>
+    </div>
+  </section>
+  <section class="pausePlay" id="pausePlay">
+    <div>
+      <button id="pause" onclick="pauseAll()">Pause All</button>
+      <button style="display: none" id="play" onclick="playAll()">Play All</button>
+    </div>
+  </section>
+  <section class="popSection" id="sidebarContainer">
+      <div class="layer" onclick="closePopup()"></div>
+      <div class="smileyFace" id="smile">
+        There is no bug, only feature! <br>
+        Contact <a href="https://github.com/fahimeshti"> @fahimesti</a>
+      </div>
+  </section>
+  <section class="d-flex">
+    <div>
+    <span onclick="showSidebar()"><i class="fas fa-bars" id="barIcon"></i></span>
+    <span>Torrents</span>
+    </div>
+    <div class="action-btn">
+    <span onclick="addTorrent()"><i class="fas fa-plus"></i></span>
+    <span onclick="searchPop()"><i class="fas fa-search"></i></span>
+    <span onclick="popups()"><i class="fas fa-ellipsis-v"></i></span>
+    </div>
+  </section>
+ <section id="appBody">
+  <section class="downloads">
+    <div class="files">
+      <img src="new_utorrent.png" alt="logo">
+      <p>1. Udeny - the Ultimate course to Universe [1st Edition] </p>
+    </div>
+    <div class="text-muted">
+      <div class="content-left">
+        <div id="myProgress">
+          <div id="myBar"></div>
+        </div>
+        <span class="percent" id="percentId">1%</span>
+      </div>
+      <div class="content-right">
+        <i class="fas fa-server"></i>
+        <span>
+          &nbsp;
+          <span id="counter">0</span> MB / <span id="size">999</span> MB
+        </span>
+        <span class="pauseBtn" id="pauseBtn">
+          <i class="fas fa-pause"></i>
+          Paused
+        </span>
+      </div>
+    </div>
+  </section>
+  
+  <div class="toast" role="alert" 
+      aria-live="assertive" 
+      aria-atomic="true" 
+      data-delay="4000">
+    <div class="toast-header">
+      <strong id="errorTxt" class="mr-auto"></strong>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">OK</span>
+      </button>
+    </div>
+  </div>
+  
+ </section>
+ 
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>

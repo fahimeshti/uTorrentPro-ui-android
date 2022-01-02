@@ -1,0 +1,247 @@
+* {
+  transition: all 0.2s;
+}
+body {
+  font-size: 15pt;
+  background: #111;
+  color: white;
+  overflow-x: hidden;
+}
+.d-flex span {
+  cursor: pointer !important;
+}
+.d-flex {
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 6px #000;
+}
+.d-flex div, span { 
+  color: #fff;
+  margin: 14px 10px;
+}
+i{
+  color: #ddd;
+  font-weight: 300;
+}
+.downloads {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+.downloads .files {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.downloads p {
+  text-align: left;
+  margin-left: 15px;
+  font-size: 16px;
+}
+.downloads img {
+  width: 60px;
+  transform: translateY(-10px);
+}
+.percent {
+  position: absolute;
+  left: 22%;
+  margin-right: 10px;
+  font-size: 12px;
+}
+.text-muted {
+  font-size: 12px;
+  
+}
+.text-muted span {
+  margin: 0;
+}
+.text-muted i {
+  margin-left: 20px;
+}
+#myProgress {
+  width: 18%;
+  height: 3px;
+  position: relative;
+  background-color: #ddd;
+  transform: translateY(12px);
+  margin-right: 0;
+}
+#myBar, #UserBar {
+  background-color: teal;
+  width: 10%;
+  height: 3px;
+  position: absolute;
+}
+.pauseBtn {
+  margin-left: -16px !important;
+  display: none;
+}
+.pauseBtn.show {
+  display: inline;
+}
+.pauseBtn .fa-pause {
+   background: #eee;
+   border-radius: 50%;
+   padding: 3px;
+   color: #222;
+   font-size: 7px;
+   vertical-align: text-top;
+}
+.fa-server {
+  margin-left: 50px !important;
+}
+.smileyFace {
+  background: transparent;
+  z-index: 99;
+  transform: translateX(-100vw);
+  transition: transform 0.3s;
+}
+.smileyFace.show {
+  transform: translateX(0);
+}
+.smileyFace a {
+  text-decoration: none;
+  color: teal;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.rotate {
+  transform: rotate(-90deg);
+  transition-duration: 0.3s;
+}
+.pausePlay {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.pausePlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+.pausePlay button {
+  border: none;
+  background-color: #222;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 3px;
+}
+#appBody {
+  height: 100vh;
+}
+/*popup two */
+.popSection {
+  position:absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+}
+.popSection.show {
+  /*display: none;*/
+  opacity: 1;
+  visibility: visible;
+}
+.popSection .layer {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+.popupTwo {
+  top: 50%;
+  background: #444;
+  color: #fff;
+  padding: 20px 20px;
+  width: 88%;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 30;
+}
+.popupTwo div {
+  align-self: flex-end;
+}
+.popupTwo button {
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  color: #59BC44CF;
+  margin: 15px 7px 0 7px;
+  font-size: 16px;
+  background: transparent;
+  transition: all 0.3s;
+}
+.popupTwo button:hover {
+  background: #59BC4424;
+}
+.popupTwo small {
+  font-size: 12px;
+}
+.popupTwo input {
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #eee;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+}
+.popupTwo input:focus {
+  border-bottom: 2px solid teal;
+}
+.toast {
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  border: none !important;
+ }
+.toast-header {
+  background: #ccc;
+  color: #222;
+  position: relative;
+  border-radius: 2px;
+  padding: 0.8rem;
+  font-weight: 400;
+}
+/*
+.toast-header .small {
+  text-align: right !important;
+}*/
+button.close {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  outline: none;
+   position: absolute;
+   top: 10px !important;
+   right: 10px !important;
+}
+button.close span {
+  color: green;
+  font-weight: bold;
+}
+@media only screen and (min-width: 767px) {
+  .downloads .files {
+    justify-content: flex-start;
+  }
+  .percent {
+    left: 20%;
+  }
+  .content-right {
+    position: absolute;
+    right: 50px;
+  }
+}
